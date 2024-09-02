@@ -1,3 +1,10 @@
+/* colore e font di base per i testi */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
 body {
   height: 100vh;
   width: 99%;
@@ -24,4 +31,86 @@ h1 {
 
 p {
   color: #edeaf0;
+}
+
+/* css Results page */
+
+/* css titolo e sottotitolo */
+#ResultsMain h1 {
+  font-size: 4rem;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+#ResultsMain h4 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+/* css datti risposte correct wrong */
+.dati {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 30;
+  margin: auto;
+}
+
+.dati h1 {
+  font-weight: 400;
+  margin-block: 0;
+}
+
+.dati span {
+  font-weight: 600;
+}
+
+.Correct {
+  text-align: left;
+  margin-inline: 5rem;
+  margin-block: 3rem;
+}
+
+.Wrong {
+  text-align: right;
+  margin-inline: 5rem;
+  margin-block: 3rem;
+}
+
+/* css text con grafico a donut */
+#textIntoG {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+#textIntoG h5 {
+  font-size: 1rem;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+#textIntoG span {
+  color: #00ffff;
+}
+
+/* button rate us */
+#rateUs {
+  font-size: 1.3rem;
+  font-weight: 600;
+  background: none;
+  border: 2px solid white;
+  padding-inline: 3em;
+  padding-block: 0.8em;
 }
