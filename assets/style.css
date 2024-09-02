@@ -1,5 +1,5 @@
 body {
-  height: 100vh;
+  height: 90vh;
   width: 99%;
   background-image: url(./img/bg.jpg);
   background-size: cover;
@@ -17,11 +17,48 @@ footer {
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 60px;
   color: #edeaf0;
   margin-top: 10rem;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
 }
 
 p {
   color: #edeaf0;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#text {
+  height: auto;
+  width: 58rem;
+  margin-top: 1rem;
+  background: transparent;
+  outline: none;
+  color: #edeaf0;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #d20094;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+}
+#button {
+  width: 16rem;
+  height: 4.5rem;
+  margin-top: 4rem;
+  background-color: #00ffff;
+  font-size: 2rem;
+  /* box-shadow: 10px 0px 50px #00ffff; */
+}
+#button:active {
+  background-color: #00ffff;
+  box-shadow: 0px 0px 30 px #00ffff;
+  border: 0;
+  transition: 1, 3 s;
 }
