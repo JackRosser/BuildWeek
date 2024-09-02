@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>ResultsPage</title>
   </head>
   <body>
@@ -11,39 +18,46 @@
       <img src="assets/img/epicode_logo.png" alt="epicode_logo" id="logo" />
     </header>
 
-    <main id="ResultsMain">
-      <!-- blocco titolo e sottotitolo -->
-      <section class="title">
-        <h1>results</h1>
-        <h4>The summary Of your answers:</h4>
-      </section>
+    <div id="spazio">
+      <main id="ResultsMain">
+        <!-- blocco titolo e sottotitolo -->
+        <section class="title">
+          <h1 class="titleRes">results</h1>
+          <h4>The summary Of your answers:</h4>
+        </section>
 
-      <!-- sezzione risposte -->
-      <section class="dati">
-        <div class="Correct">
-          <h1>Correct</h1>
-          <h1 class="percent"><span>66.7%</span></h1>
-          <figcaption>4/6 questions</figcaption>
-        </div>
+        <!-- sezzione risposte -->
+        <section class="dati">
+          <div class="Correct">
+            <h1>Correct</h1>
+            <h1 class="percent"><span></span></h1>
+            <figcaption>4/6 questions</figcaption>
+          </div>
 
-        <div class="Wrong">
-          <h1>Wrong</h1>
-          <h1 class="percent"><span>33.3%</span></h1>
-          <figcaption>2/6 questions</figcaption>
-        </div>
-      </section>
+          <div class="Wrong">
+            <h1>Wrong</h1>
+            <h1 class="percent"><span></span></h1>
+            <figcaption>2/6 questions</figcaption>
+          </div>
+        </section>
 
-      <canvas>444</canvas>
-      <!-- p con grafico a torta -->
-      <article id="textIntoG">
-        <h5>Congratulations!</h5>
-        <h5><span>You passed the exam.</span></h5>
-        <p>We'll send you the certificate in few minutes.</p>
-        <p>Check your email (including promotions / spam folder)</p>
-      </article>
+        <!-- grafico -->
 
-      <!-- BUTTON -->
-      <div><input type="button" value="RATE US" id="rateUs" /></div>
-    </main>
+        <canvas id="myChart"></canvas>
+
+        <!-- p con grafico a torta -->
+        <article id="textIntoG">
+          <h5>Congratulations!</h5>
+          <h5><span>You passed the exam.</span></h5>
+          <p>We'll send you the certificate in few minutes.</p>
+          <p>Check your email (including promotions / spam folder)</p>
+        </article>
+
+        <!-- BUTTON -->
+        <div id="buttonConteiner"><input type="button" value="RATE US" id="rateUs" /></div>
+      </main>
+    </div>
+
+    <script src="assets/script/ResultsJS.js"></script>
   </body>
 </html>

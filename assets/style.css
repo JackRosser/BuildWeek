@@ -1,8 +1,7 @@
 /* colore e font di base per i testi */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   color: white;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 body {
@@ -36,7 +35,12 @@ p {
 /* css Results page */
 
 /* css titolo e sottotitolo */
-#ResultsMain h1 {
+
+.title {
+  margin-bottom: 80px;
+}
+
+.titleRes {
   font-size: 4rem;
   margin-top: 10px;
   margin-bottom: 0px;
@@ -54,17 +58,16 @@ p {
 .dati {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: relative;
-  left: 0;
-  right: 0;
   top: 0;
-  bottom: 30;
+  bottom: 0;
   margin: auto;
 }
 
 .dati h1 {
   font-weight: 400;
-  margin-block: 0;
+  margin: 0;
 }
 
 .dati span {
@@ -77,6 +80,11 @@ p {
   margin-block: 3rem;
 }
 
+.Correct figcaption,
+.Wrong figcaption {
+  font-size: 1.6em;
+}
+
 .Wrong {
   text-align: right;
   margin-inline: 5rem;
@@ -86,7 +94,7 @@ p {
 /* css text con grafico a donut */
 #textIntoG {
   width: 240px;
-  height: 240px;
+  height: 160px;
   position: absolute;
   left: 0;
   right: 0;
@@ -105,7 +113,30 @@ p {
   color: #00ffff;
 }
 
+/* grafico */
+#myChart {
+  height: 400px;
+  width: 400px;
+  border: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 /* button rate us */
+#buttonConteiner {
+  margin-top: 100px;
+  /* position: absolute;
+  left: 0;
+  right: 0;
+  top: 80%;
+  bottom: 0;
+  margin: auto; */
+}
+
 #rateUs {
   font-size: 1.3rem;
   font-weight: 600;
@@ -113,4 +144,20 @@ p {
   border: 2px solid white;
   padding-inline: 3em;
   padding-block: 0.8em;
+}
+
+#rateUs:active {
+  transition: 200ms;
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 800;
+  background: rgb(240, 240, 240);
+  border: 2px solid black;
+  padding-inline: 3em;
+  padding-block: 0.8em;
+}
+
+#spazio {
+  max-width: 1300px;
+  margin: auto;
 }
