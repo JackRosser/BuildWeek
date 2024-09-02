@@ -16,9 +16,6 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-footer {
-  text-align: center;
-}
 #logo {
   width: 10%;
   height: auto;
