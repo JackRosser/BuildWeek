@@ -89,19 +89,33 @@ const questions = [
 
 //____________________________________________________
 
-let i = 0;
+let i = 9;
 h1.innerText = questions[i].question;
 let textBox = [];
+let randomBox = [];
 
 //pusho nel contenitore vuoto il testo delle risposte non corrette
 for (let j = 0; j < questions[i].incorrect_answers.length; j++) {
   textBox.push(questions[i].incorrect_answers[j]);
 }
+// pusho la risposta corretta
 textBox.push(questions[i].correct_answer);
-console.log(textBox);
 
-// questo fa cambiare test in base a i
-// h1.addEventListener("click", function () {
-//   i += 1;
-//   h1.innerText = questions[i].question;
-// });
+// riempio a randombox con posizioni casuali delle domande
+
+for (let i = 0; i < textBox.length; i++) {
+  let randomNum = Math.floor(Math.random() * textBox.length);
+  let removed = textBox.splice(randomNum, 1);
+  randomBox.push(removed);
+  i--;
+}
+
+for (let i = 0; i < randomBox.length; i++) {
+  let div = document.createElement("div");
+  div.className = "risposte";
+  let button = document.createElement("button");
+  button.type = "submit";
+  button.innerText = randomBox[i];
+  div.appendChild(button);
+  form.appendChild(div);
+}
