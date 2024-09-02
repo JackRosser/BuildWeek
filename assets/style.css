@@ -3,11 +3,24 @@ body {
   width: 100vw;
   background-image: url(./img/bg.jpg);
   background-size: cover;
+}
+main,
+footer {
   text-align: center;
 }
 #logo {
   width: 10%;
   height: auto;
-  margin-left: 5rem;
-  margin-top: 4rem;
+  margin-left: 11rem;
+  margin-top: 3rem;
+}
+
+h1 {
+  font-size: 4.5rem;
+  color: #edeaf0;
+  margin-top: 10rem;
+}
+
+p {
+  color: #edeaf0;
 }
