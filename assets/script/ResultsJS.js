@@ -48,3 +48,10 @@ new Chart(myChart, {
     },
   },
 });
+
+// il bottone ti porta alla pagina di feedback
+const rateUs = document.getElementById("rateUs");
+
+rateUs.addEventListener("click", () => {
+  window.location.href = "feedback.html";
+});
