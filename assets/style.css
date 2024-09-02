@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -7,28 +9,95 @@
 
 body {
   max-width: 1440px;
-  height: 100vh;
   background-image: url(./img/bg.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 5% 10%;
+  font-family: "Outfit", sans-serif;
+  border: 1px solid red;
+  height: 100vh;
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
 
-#logo {
-  width: 10%;
-  height: auto;
-  margin-left: 11rem;
-  margin-top: 3rem;
+header {
+  width: 15%;
+  min-width: 100px;
+}
+
+/* logo Epicode */
+
+header img {
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
-  font-size: 4.5rem;
-  color: #edeaf0;
-  margin-top: 10rem;
+  color: white;
+  font-size: 60px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 5%;
 }
 
-p {
-  color: #edeaf0;
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20%;
+  }
+}
+
+footer {
+  text-transform: uppercase;
+  color: white;
+}
+
+/* zona risposte */
+
+#box-risposte {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 70%;
+  height: 25%;
+  gap: 15px;
+  margin-bottom: 5%;
+}
+
+.risposte {
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  border: 4px solid red;
+  margin-inline: 20px;
+  display: block;
+  padding: 10px;
+  font-family: "Inter", sans-serif;
+  border: ;
+}
+
+@media only screen and (max-width: 767px) {
+  .risposte {
+    margin-inline: 5px;
+  }
+
+  #box-risposte {
+    width: 100%;
+    grid-template-columns: 1fr;
+    height: 50vh;
+  }
+}
+
+.violet {
+  color: #c4008f;
 }
