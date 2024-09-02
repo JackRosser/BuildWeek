@@ -3,8 +3,8 @@ const chartData = {
 };
 
 // quante corrette e sbagliate
-let sbagliate = 0;
 let corrette = 0;
+let sbagliate = 0;
 
 // funzione che calcola la percentuale in base alle domande corrette
 function calcDomande(numC, numS) {

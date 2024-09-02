@@ -65,13 +65,15 @@ p {
   margin: auto;
 }
 
+/* titolo dei dati */
 .dati h1 {
   font-weight: 400;
-  margin: 0;
+  margin: -9px;
 }
 
+/* dati in percentuale in grassetto */
 .dati span {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .Correct {
@@ -82,7 +84,8 @@ p {
 
 .Correct figcaption,
 .Wrong figcaption {
-  font-size: 1.6em;
+  font-size: 1.4em;
+  font-weight: 200;
 }
 
 .Wrong {
@@ -158,6 +161,7 @@ p {
 }
 
 #spazio {
+  min-width: 1000px;
   max-width: 1300px;
   margin: auto;
 }
