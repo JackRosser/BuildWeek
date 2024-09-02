@@ -15,7 +15,6 @@ body {
   background-attachment: fixed;
   padding: 5% 10%;
   font-family: "Outfit", sans-serif;
-  border: 1px solid red;
   height: 100vh;
 }
 
@@ -77,13 +76,36 @@ footer {
 .risposte {
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0.2);
-  color: white;
-  border: 4px solid red;
+
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
   margin-inline: 20px;
-  display: block;
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Inter", sans-serif;
-  border: ;
+  text-align: center;
+  transition: background-color 0.3s, border-image 0.3s;
+  background-origin: border-box;
+  background-image: linear-gradient(to top, #0b103b00, #ffffff);
+  padding: 2px;
+}
+
+.risposte button {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background-image: linear-gradient(to right, #0b103b, #6f2873);
+  color: white;
+}
+
+.risposte:hover {
+  background-image: linear-gradient(to top, #b7018c, #ffffff);
+}
+
+.risposte button:hover {
+  background-image: linear-gradient(to bottom, #7a005d, #b7018c);
 }
 
 @media only screen and (max-width: 767px) {
