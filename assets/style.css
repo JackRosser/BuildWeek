@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1440px;
+  height: 100vh;
+  background-image: url(./img/bg.jpg);
+  background-size: cover;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+footer {
+  text-align: center;
+}
+#logo {
+  width: 10%;
+  height: auto;
+  margin-left: 11rem;
+  margin-top: 3rem;
+}
+
+h1 {
+  font-size: 4.5rem;
+  color: #edeaf0;
+  margin-top: 10rem;
+}
+
+p {
+  color: #edeaf0;
+}
