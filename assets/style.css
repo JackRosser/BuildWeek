@@ -98,6 +98,7 @@ footer {
   border-radius: 30px;
   background-image: linear-gradient(to right, #0b103b, #6f2873);
   color: white;
+  padding: 5px;
 }
 
 .risposte:hover {
