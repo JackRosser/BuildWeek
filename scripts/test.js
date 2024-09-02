@@ -89,7 +89,7 @@ const questions = [
 
 //____________________________________________________
 
-let i = 9;
+let i = 0;
 h1.innerText = questions[i].question;
 let textBox = [];
 let randomBox = [];

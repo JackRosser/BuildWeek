@@ -76,7 +76,6 @@ footer {
 .risposte {
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0.2);
-
   border: 2px solid transparent;
   background-clip: padding-box;
   position: relative;
