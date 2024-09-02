@@ -87,19 +87,21 @@ const questions = [
   }
 ];
 
-let oneButton = document.getElementById("1");
-let twoButton = document.getElementById("2");
-let threeButton = document.getElementById("3");
-let fourButton = document.getElementById("4");
-let incorrect = [0, 1, 2, 3];
-
 //____________________________________________________
 
 let i = 0;
 h1.innerText = questions[i].question;
+let textBox = [];
+
+//pusho nel contenitore vuoto il testo delle risposte non corrette
+for (let j = 0; j < questions[i].incorrect_answers.length; j++) {
+  textBox.push(questions[i].incorrect_answers[j]);
+}
+textBox.push(questions[i].correct_answer);
+console.log(textBox);
 
 // questo fa cambiare test in base a i
-h1.addEventListener("click", function () {
-  i += 1;
-  h1.innerText = questions[i].question;
-});
+// h1.addEventListener("click", function () {
+//   i += 1;
+//   h1.innerText = questions[i].question;
+// });
