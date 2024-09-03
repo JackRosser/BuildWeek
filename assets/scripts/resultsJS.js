@@ -8,8 +8,8 @@ let sbagliate = 0;
 
 // funzione che calcola la percentuale in base alle domande corrette
 function calcDomande(numC, numS) {
-  corrette = Math.round((numC / 6) * 100);
-  sbagliate = Math.round((numS / 6) * 100);
+  corrette = ((numC / 6) * 100).toFixed(1);
+  sbagliate = ((numS / 6) * 100).toFixed(1);
 }
 
 calcDomande(4, 2);
