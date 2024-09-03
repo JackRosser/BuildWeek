@@ -1,72 +1,126 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
 
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
 body {
+  max-width: 1440px;
   background-image: url(./img/bg.jpg);
   background-size: cover;
-  font-family: "inter", sans-serif;
-  text-align: left;
-  padding-left: 2rem;
-  font-size: 16px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 5% 10%;
+  font-family: "Outfit", sans-serif;
+  height: 100vh;
+  cursor: default;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  width: 15%;
+  min-width: 100px;
+}
+
+/* logo Epicode */
+
+header img {
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.h1-jack {
+  color: white;
+  font-size: 60px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+@media only screen and (max-width: 767px) {
+  .h1-jack {
+    font-size: 2rem;
+    margin-bottom: 20%;
+  }
+}
+
+.footer-jack {
+  text-transform: uppercase;
   color: white;
 }
 
-.logoepicode > img {
-  width: 10%;
-  padding-top: 2rem;
+/* zona risposte */
+
+#box-risposte {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 70%;
+  height: 25%;
+  gap: 15px;
+  margin-bottom: 5%;
 }
 
-h1 {
-  margin-bottom: 10px;
-  font-family: "outfit", sans-serif;
-  font-size: 60px;
-  font-weight: 400;
-  margin-right: 70%;
-}
-
-h2 {
-  color: #d20094;
-}
-
-h1 > span {
-  font-weight: 700;
-}
-
-.checkbox {
+.risposte {
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  margin-inline: 20px;
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-}
-.button {
-  background-color: #00ffff;
-  margin-left: 50%;
-  font-weight: 700;
-  box-shadow: 0 0 10px #00ffff;
-  border: 0;
-  padding-right: 2.5rem;
-  padding-left: 2.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  font-size: 20px;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  transition: background-color 0.3s, border-image 0.3s;
+  background-origin: border-box;
+  background-image: linear-gradient(to top, #0b103b00, #ffffff);
+  padding: 2px;
 }
 
-.button:active {
-  background-color: #00ffff;
-  margin-left: 50%;
-  font-weight: 700;
-  box-shadow: 0 0 30px #00ffff;
-  border: 0;
-  transition: 1, 3s;
-  font-size: 20px;
+.risposte button {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background-image: linear-gradient(to right, #0b103b, #6f2873);
+  color: white;
+  padding: 5px;
+  cursor: pointer;
 }
 
-ul {
-  padding-left: 20px;
-  margin-top: 2%;
-  margin-bottom: 5%;
-  line-height: 1.8em;
+.risposte:hover {
+  background-image: linear-gradient(to top, #b7018c, #ffffff);
 }
 
-p {
-  margin-right: 60%;
+.risposte button:hover {
+  background-image: linear-gradient(to bottom, #7a005d, #b7018c);
+}
+
+@media only screen and (max-width: 767px) {
+  .risposte {
+    margin-inline: 5px;
+  }
+
+  #box-risposte {
+    width: 100%;
+    grid-template-columns: 1fr;
+    height: 50vh;
+  }
+}
+
+.violet {
+  color: #c4008f;
 }
