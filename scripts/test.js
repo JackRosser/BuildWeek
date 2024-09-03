@@ -136,6 +136,40 @@ let caricoDomanda = function () {
 };
 
 //scateno la funzione
+// caricoDomanda();
+// Funzione per resettare il timer e riavviarlo
+function resetTimer() {
+  if (intervalId) {
+    clearInterval(intervalId);
+  }
+  timerElement.innerHTML = 60; // Imposta di nuovo il timer a 60 secondi
+  intervalId = setInterval(countDown, 1000); // Riavvia il timer
+  caricoDomanda();
+}
+
+// Funzione che gestisce il conto alla rovescia
+function countDown() {
+  timerElement.innerHTML -= 1;
+
+  const valTimer = (timerElement.innerHTML / 60) * 100;
+
+  const conic = document.getElementById("conic");
+  conic.style.background = `conic-gradient(from 360deg at 50% 50%, #936799 ${100 - valTimer}%, #073aff00 ${
+    100 - valTimer
+  }%), radial-gradient(75% 75% at 50% 50%, #00ffffff 0%, #00ffffff 100%)`;
+
+  if (timerElement.innerHTML == 0) {
+    zonaQuestion += 1;
+    if (zonaQuestion < questions.length) {
+      caricoDomanda();
+    } else {
+      alert("Hai completato tutte le domande!");
+      clearInterval(intervalId);
+    }
+  }
+}
+
+// Carica la prima domanda
 caricoDomanda();
 // qui inizia la parte relativa alla raccolta dati del form
 
@@ -174,11 +208,11 @@ form.addEventListener("click", function (e) {
   }
 });
 
-let timer = 1;
-if (timer === 1) {
-  zonaQuestion += 1;
-  caricoDomanda();
-}
+// let timer = 1;
+// if (timer === 1) {
+//   zonaQuestion += 1;
+//   caricoDomanda();
+// }
 
 // AREA DEL TIMER
 
@@ -200,7 +234,9 @@ function countDown() {
 
   // questo if controlla a che punto è il timer, appuna arriva a 0 con la funzione clearInterval() stoppa la funzionee setIterval()
   if (timer.innerHTML == 0) {
+    zonaQuestion += 1;
     clearInterval(intervalId);
+    caricoDomanda();
     //   qui ci dovrebbe andare la parte che nel caso in cui il timer va a 0, ti porta al prossimo round
   }
 }

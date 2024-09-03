@@ -81,7 +81,6 @@ main {
 
 @media only screen and (max-width: 767px) {
   .footerjack {
-    border: 1px solid red;
     height: 10vh;
   }
 }
@@ -119,6 +118,15 @@ main {
   margin-bottom: 5%;
 }
 
+@media only screen and (max-width: 767px) {
+  #box-risposte {
+    grid-template-columns: 1fr;
+    gap: 0;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
 .risposte {
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0.2);
@@ -128,11 +136,12 @@ main {
   margin-inline: 20px;
   padding: 3px;
   background-image: linear-gradient(to top, #0b103b, #ffffff);
+  height: 60px;
 }
 
 .risposta_base {
   width: 100%;
-  height: 100%;
+  height: 50px;
   border-radius: 30px;
   background-image: linear-gradient(to right, #0b103b, #6f2873);
   color: white;
@@ -154,7 +163,7 @@ main {
 
 .risposta_corretta {
   width: 100%;
-  height: 100%;
+  height: 50px;
   border-radius: 30px;
   background-image: linear-gradient(to right, #00ff44, #ffffff);
   color: black;
@@ -169,7 +178,7 @@ main {
 
 .risposta_incorretta {
   width: 100%;
-  height: 100%;
+  height: 50px;
   border-radius: 30px;
   background-image: linear-gradient(to right, #ff0000, #ffffff);
   color: black;
