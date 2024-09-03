@@ -36,8 +36,8 @@ console.log(percentCorrect[0].innerHTML);
 
 // inserisco il resoconto domande azzeccate su tot
 const resoConto = document.querySelectorAll("figcaption");
-resoConto[0].innerHTML = `${risposteCorrette.length} / ${totDomande.length} questions`;
-resoConto[1].innerHTML = `${risposteSbagliate.length} / ${totDomande.length} questions`;
+resoConto[0].innerHTML = `${risposteCorrette.length}/${totDomande.length} questions`;
+resoConto[1].innerHTML = `${risposteSbagliate.length}/${totDomande.length} questions`;
 
 // creazione grafico a donut
 const grafico = document.getElementById("grafico");
