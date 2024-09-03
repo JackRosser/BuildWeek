@@ -1,34 +1,72 @@
-* {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
 
 body {
-  max-width: 1440px;
-  height: 100vh;
   background-image: url(./img/bg.jpg);
   background-size: cover;
+  font-family: "inter", sans-serif;
+  text-align: left;
+  padding-left: 2rem;
+  font-size: 16px;
+  color: white;
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
-
-#logo {
+.logoepicode > img {
   width: 10%;
-  height: auto;
-  margin-left: 11rem;
-  margin-top: 3rem;
+  padding-top: 2rem;
 }
 
 h1 {
-  font-size: 4.5rem;
-  color: #edeaf0;
-  margin-top: 10rem;
+  margin-bottom: 10px;
+  font-family: "outfit", sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  margin-right: 70%;
+}
+
+h2 {
+  color: #d20094;
+}
+
+h1 > span {
+  font-weight: 700;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.button {
+  background-color: #00ffff;
+  margin-left: 50%;
+  font-weight: 700;
+  box-shadow: 0 0 10px #00ffff;
+  border: 0;
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 20px;
+}
+
+.button:active {
+  background-color: #00ffff;
+  margin-left: 50%;
+  font-weight: 700;
+  box-shadow: 0 0 30px #00ffff;
+  border: 0;
+  transition: 1, 3s;
+  font-size: 20px;
+}
+
+ul {
+  padding-left: 20px;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  line-height: 1.8em;
 }
 
 p {
-  color: #edeaf0;
+  margin-right: 60%;
 }
