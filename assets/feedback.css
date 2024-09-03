@@ -24,32 +24,9 @@ body {
   font-weight: 700;
   font-style: normal;
 }
-.star-widget input {
-  display: none;
+#star-container {
+  margin-block: 2rem 8rem;
 }
-
-.star-widget label {
-  font-size: 60px;
-  color: #0b113b;
-  padding: 10px;
-  transition: all 0.2s ease;
-  margin-top: 2rem;
-}
-
-input:not(:checked) ~ label:hover,
-input:not(:checked) ~ label:hover ~ label {
-  color: #00ffff;
-}
-
-input:checked ~ label {
-  color: #00ffff;
-}
-
-input#rate-10:checked ~ label {
-  color: #00ffff;
-  text-shadow: 0 0 20px#2972A2;
-}
-
 #pgabriele {
   color: #edeaf0;
   font-size: 38px;

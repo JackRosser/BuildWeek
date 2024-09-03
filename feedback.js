@@ -1,36 +1,47 @@
-// function insertStar() {
-//     // Individuo il div dove posizionare le stelle
-//    let src = document.getElementById("star-container");
-//    // Ciclo per 10 stelle
-//    for (let i = 0; i < 10; i++) {
-//        // Creo un tag immagine
-//        let img = document.createElement("img");
-//        // Gli applico il path della mia stella e le proprietà volute
-//        img.src = " <svg width="47" height="46" viewBox="0 0 47 46" fill="none" xmlns="http://www.w3.org/2000/svg" class="stars">
-//<path
-//d="M22.2044 1.55551C22.6143 0.569963 24.0104 0.569964 24.4203 1.55552L29.9874 14.9402C30.1602 15.3557 30.5509 15.6396 30.9994 15.6756L45.4494 16.834C46.5134 16.9193 46.9448 18.2471 46.1341 18.9415L35.1248 28.3722C34.7831 28.6649 34.6338 29.1242 34.7382 29.5619L38.1018 43.6626C38.3494 44.7009 37.2199 45.5215 36.309 44.9651L23.9379 37.4089C23.5538 37.1743 23.0709 37.1743 22.6868 37.4089L10.3157 44.9651C9.40478 45.5215 8.27528 44.7009 8.52295 43.6626L11.8865 29.5619C11.9909 29.1242 11.8416 28.6649 11.4999 28.3722L0.490575 18.9415C-0.320069 18.2471 0.111362 16.9193 1.17535 16.834L15.6253 15.6756C16.0738 15.6396 16.4645 15.3557 16.6374 14.9402L22.2044 1.55551Z"
-// fill="#00FFFF/>;
-//        img.width = 100;
-//        img.height = 100;
-//        img.id = 'star' + i;
-//        img.style.filter = 'opacity(0.25)';
-//        // La appendo all'HTML
-//        src.appendChild(img);
-//    }
-// }
+function insertStar() {
+  //Individuo il div dove posizionare le stelle
+  let src = document.getElementById("star-container");
+  // Ciclo per 10 stelle
+  for (let i = 0; i < 10; i++) {
+    // Creo un tag immagine
+    let img = document.createElement("img");
+    // Gli applico il path della mia stella e le proprietà volute
+    img.src = "assets/img/star.svg";
+    img.width = 90;
+    img.height = 80;
+    img.id = "star" + i;
+    img.style.filter = "opacity(0.1)";
+    // Aggiungo l'evento mouseover per cambiare l'opacità
+    img.addEventListener("mouseover", colorStar);
 
-// function colorStar(event) {
-//    // Pesco l'immagine su cui sono posizionato
-//    let star = event.srcElement.id;
-//    // Se esiste
-//    if (star) {
-//        // Prendo il l'elemento img su cui sono sopra
-//        let selected = document.getElementById(star);
-//        // Gli dò opacità 100%
-//        selected.style.filter = 'opacity(1)';
-//    }
-// }
+    //     // Aggiungo l'evento mouseout per resettare l'opacità
+    img.addEventListener("mouseout", resetStars);
 
-// window.onload(insertStar());
+    //     // La appendo all'HTML
+    src.appendChild(img);
+  }
+}
 
-//HO PROVATO A RIPRODURRE LE STELLE CON JS MA LE PREFERIVO CO CSS//
+function colorStar(event) {
+  //   // Pesco l'id dell'immagine su cui sono posizionato
+  let starId = event.target.id;
+  //   // Estraggo l'indice della stella (es: "star3" -> 3)
+  let starIndex = parseInt(starId.replace("star", ""));
+
+  //  // Ciclo tutte le stelle fino a quella selezionata
+  for (let i = 0; i <= starIndex; i++) {
+    let star = document.getElementById("star" + i);
+    star.style.filter = "opacity(1)";
+  }
+}
+
+function resetStars() {
+  //   // Ripristina tutte le stelle all'opacità iniziale
+  for (let i = 0; i < 10; i++) {
+    let star = document.getElementById("star" + i);
+    star.style.filter = "opacity(0.1)";
+  }
+}
+
+// // Assegno la funzione insertStar all'evento onload senza eseguirla immediatamente
+window.onload = insertStar;
