@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -7,28 +9,118 @@
 
 body {
   max-width: 1440px;
-  height: 100vh;
   background-image: url(./img/bg.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 5% 10%;
+  font-family: "Outfit", sans-serif;
+  height: 100vh;
+  cursor: default;
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
 
-#logo {
-  width: 10%;
-  height: auto;
-  margin-left: 11rem;
-  margin-top: 3rem;
+header {
+  width: 15%;
+  min-width: 100px;
 }
 
-h1 {
-  font-size: 4.5rem;
-  color: #edeaf0;
-  margin-top: 10rem;
+/* logo Epicode */
+
+header img {
+  width: 100%;
 }
 
-p {
-  color: #edeaf0;
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.h1-jack {
+  color: white;
+  font-size: 60px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+@media only screen and (max-width: 767px) {
+  .h1-jack {
+    font-size: 2rem;
+    margin-bottom: 20%;
+  }
+}
+
+.footer-jack {
+  text-transform: uppercase;
+  color: white;
+}
+
+/* zona risposte */
+
+#box-risposte {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 70%;
+  height: 25%;
+  gap: 15px;
+  margin-bottom: 5%;
+}
+
+.risposte {
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  margin-inline: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  transition: background-color 0.3s, border-image 0.3s;
+  background-origin: border-box;
+  background-image: linear-gradient(to top, #0b103b00, #ffffff);
+  padding: 2px;
+}
+
+.risposte button {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background-image: linear-gradient(to right, #0b103b, #6f2873);
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.risposte:hover {
+  background-image: linear-gradient(to top, #b7018c, #ffffff);
+}
+
+.risposte button:hover {
+  background-image: linear-gradient(to bottom, #7a005d, #b7018c);
+}
+
+@media only screen and (max-width: 767px) {
+  .risposte {
+    margin-inline: 5px;
+  }
+
+  #box-risposte {
+    width: 100%;
+    grid-template-columns: 1fr;
+    height: 50vh;
+  }
+}
+
+.violet {
+  color: #c4008f;
 }
