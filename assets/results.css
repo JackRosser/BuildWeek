@@ -1,14 +1,13 @@
-/* css Results page */
+/* css font Results page */
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
-
-/* css titolo e sottotitolo */
 
 * {
   font-family: "Inter";
 }
 
+/* sezione titolo sottotitolo */
 .title {
   margin-bottom: 55px;
 }
@@ -27,7 +26,7 @@
   display: inline-block;
 }
 
-/* css datti risposte correct wrong */
+/* css dati delle risposte correct, wrong */
 
 .dati div {
   display: inline-block;
@@ -47,6 +46,7 @@
   font-weight: 700;
 }
 
+/* conteiner di gruppo correct e wrong */
 .Correct {
   text-align: left;
   width: 200px;
@@ -65,7 +65,7 @@
   font-weight: 200;
 }
 
-/* css text con grafico a donut */
+/* sezione grafico a ciambella e testo all'interno */
 #textIntoG {
   width: 240px;
   height: 160px;
@@ -97,7 +97,7 @@
   padding-inline: 5px;
 }
 
-/* grafico */
+/* grafico  */
 
 #grafico {
   width: 390px;
