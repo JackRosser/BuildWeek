@@ -3,15 +3,14 @@
 }
 .timersection {
   text-align: center;
-  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 #conic {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   position: relative;
   box-shadow: 0px 0px 25px 7px #00000087;
@@ -20,8 +19,8 @@
 
 #conic::before {
   content: "";
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   /* trasparenza simulata */
   background-color: #703090;
 
@@ -33,6 +32,27 @@
   box-shadow: inset 0px 0px 25px 7px #00000087;
 }
 
+@media only screen and (max-width: 767px) {
+  #conic {
+    width: 90px;
+    height: 90px;
+  }
+  #conic::before {
+    content: "";
+    width: 72px;
+    height: 72px;
+    /* trasparenza simulata */
+    background-color: #703090;
+
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0px 0px 25px 7px #00000087;
+  }
+}
+
 #timerConteiner {
   position: absolute;
   top: 50%;
@@ -42,7 +62,7 @@
 }
 
 #timerConteiner h3 {
-  font-size: 60px;
+  font-size: 30px;
   margin: 0;
 }
 
@@ -50,4 +70,11 @@
   font-weight: 600;
   font-size: 0.8rem;
   margin: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  #timerConteiner p {
+    font-size: 0.4rem;
+    margin: 0;
+  }
 }

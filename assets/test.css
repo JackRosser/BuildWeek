@@ -13,9 +13,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 5% 10%;
   font-family: "Outfit", sans-serif;
-  height: 100vh;
   cursor: default;
 }
 
@@ -24,12 +22,18 @@ body::-webkit-scrollbar {
 }
 
 header {
-  width: 15%;
+  width: 100%;
   min-width: 100px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 10%;
+  height: 30vh;
 }
 
 .h1_jack {
-  font-size: 60px;
+  font-size: 30px;
   margin-bottom: 50px;
   text-align: center;
 }
@@ -37,7 +41,18 @@ header {
 /* logo Epicode */
 
 header img {
-  width: 100%;
+  width: 15%;
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    height: 10vh;
+    margin-top: 5vh;
+  }
+
+  header img {
+    width: 30%;
+  }
 }
 
 main {
@@ -46,18 +61,45 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  padding: 5% 10%;
+  height: 50vh;
+}
+
+@media only screen and (max-width: 767px) {
+  main {
+    height: 75vh;
+  }
+}
+
+.footerjack {
+  height: 20vh;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
+
+@media only screen and (max-width: 767px) {
+  .footerjack {
+    border: 1px solid red;
+    height: 10vh;
+  }
+}
+
 .h1-jack {
   color: white;
   font-size: 60px;
   font-weight: 500;
 }
 
+.spanspace {
+  margin-inline: 5px;
+}
+
 @media only screen and (max-width: 767px) {
   .h1_jack {
-    font-size: 2rem;
-    margin-bottom: 20%;
+    font-size: 1.5rem;
+    margin-bottom: 10%;
   }
 }
 
