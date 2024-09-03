@@ -6,13 +6,14 @@ body {
   background-size: cover;
   font-family: "inter", sans-serif;
   text-align: left;
-  padding-left: 2rem;
   font-size: 16px;
   color: white;
+  overflow: hidden;
+  margin-left: 3rem;
 }
-
 .logoepicode > img {
   width: 10%;
+  height: auto;
   padding-top: 2rem;
 }
 
@@ -22,10 +23,13 @@ body {
   font-size: 60px;
   font-weight: 400;
   margin-right: 70%;
+  line-height: 0.7;
 }
 
 .h2luigi {
   color: #d20094;
+  margin-bottom: 0;
+  margin-top: 3rem;
 }
 
 .h1luigi > span {
@@ -35,7 +39,7 @@ body {
 .checkbox {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 .button-luigi {
   background-color: #00ffff;
@@ -43,14 +47,16 @@ body {
   font-weight: 700;
   box-shadow: 0 0 10px #00ffff;
   border: 0;
+  box-shadow: 0 0 5px #00ffff;
   padding-right: 2.5rem;
   padding-left: 2.5rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   font-size: 20px;
+  color: black;
 }
 
-.button-luigi:active {
+/*.button-luigi:active {
   background-color: #00ffff;
   margin-left: 50%;
   font-weight: 700;
@@ -58,15 +64,53 @@ body {
   border: 0;
   transition: 1, 3s;
   font-size: 20px;
+}*/
+
+.illuminated {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
 }
 
 ul {
   padding-left: 20px;
   margin-top: 2%;
   margin-bottom: 5%;
-  line-height: 1.8em;
+  line-height: 1.6em;
 }
 
 .pluigi {
+  margin-top: 0;
   margin-right: 60%;
+}
+label {
+  font-weight: bold;
+  font-size: small;
+  margin-left: 0.3rem;
+  position: relative;
+}
+#promise {
+  width: 18px;
+  height: 18px;
+  appearance: none;
+  background-color: transparent;
+  border: solid 1px white;
+  cursor: pointe;
+}
+
+#promise:checked {
+  background-color: rgba(0, 255, 255, 0.2);
+}
+
+#promise:checked::after {
+  content: "✔";
+  font-size: 18px;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hidden {
+  display: none;
 }
