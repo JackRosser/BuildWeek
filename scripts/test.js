@@ -1,7 +1,7 @@
 let body = document.querySelector("body");
 let button = document.querySelector("button");
 let numQuest = document.querySelector("#number-question");
-let h1 = document.querySelector("h1");
+let h1 = document.querySelector(".h1_jack");
 let form = document.getElementById("box-risposte");
 
 const questions = [
@@ -89,34 +89,93 @@ const questions = [
 
 //____________________________________________________
 
-let i = 0;
-h1.innerText = questions[i].question;
-let textBox = [];
-let randomBox = [];
+let zonaQuestion = 0;
+let endFooter = document.getElementById("endfooter");
+endFooter.innerText = questions.length;
 
-//pusho nel contenitore vuoto il testo delle risposte non corrette
-for (let j = 0; j < questions[i].incorrect_answers.length; j++) {
-  textBox.push(questions[i].incorrect_answers[j]);
-}
-// pusho la risposta corretta
-textBox.push(questions[i].correct_answer);
+// definisco la funzione per caricare la domanda
 
-// riempio a randombox con posizioni casuali delle domande
+let caricoDomanda = function () {
+  h1.innerText = questions[zonaQuestion].question;
+  let textBox = [];
+  let randomBox = [];
 
-for (let i = 0; i < textBox.length; i++) {
-  let randomNum = Math.floor(Math.random() * textBox.length);
-  let removed = textBox.splice(randomNum, 1);
-  randomBox.push(removed);
-  i--;
-}
+  // numero nel footer
+  let numberFooter = document.getElementById("number-question");
+  let calcFooter = parseInt(zonaQuestion) + parseInt(1);
+  numberFooter.innerText = calcFooter;
+  // Svuoto il form delle risposte precedenti
+  form.innerHTML = "";
 
-// genero le risposte in posizioni random pescando dal randomBox
-for (let i = 0; i < randomBox.length; i++) {
-  let div = document.createElement("div");
-  div.className = "risposte";
-  let button = document.createElement("button");
-  button.type = "submit";
-  button.innerText = randomBox[i];
-  div.appendChild(button);
-  form.appendChild(div);
+  //pusho nel contenitore vuoto il testo delle risposte non corrette
+  for (let j = 0; j < questions[zonaQuestion].incorrect_answers.length; j++) {
+    textBox.push(questions[zonaQuestion].incorrect_answers[j]);
+  }
+  // pusho la risposta corretta
+  textBox.push(questions[zonaQuestion].correct_answer);
+
+  // riempio a randombox con posizioni casuali delle domande
+
+  for (let i = 0; i < textBox.length; i++) {
+    let randomNum = Math.floor(Math.random() * textBox.length);
+    let removed = textBox.splice(randomNum, 1);
+    randomBox.push(removed);
+    i--;
+  }
+
+  for (let i = 0; i < randomBox.length; i++) {
+    let div = document.createElement("div");
+    div.className = "risposte";
+    let button = document.createElement("button");
+    button.name = "answer";
+    button.innerText = randomBox[i];
+    button.className = "risposta_base";
+    div.appendChild(button);
+    form.appendChild(div);
+  }
+};
+
+//scateno la funzione
+caricoDomanda();
+// qui inizia la parte relativa alla raccolta dati del form
+
+let risposteCorrette = [];
+let risposteSbagliate = [];
+//______________________________
+form.addEventListener("click", function (e) {
+  if (e.target.tagName === "BUTTON") {
+    e.preventDefault();
+
+    if (e.target.innerText === questions[zonaQuestion].correct_answer) {
+      risposteCorrette.push(e.target.innerText);
+    } else {
+      risposteSbagliate.push(e.target.innerText);
+    }
+
+    // Verifica la risposta
+    let div = document.getElementsByClassName("risposta_base");
+    let divArray = Array.from(div);
+    for (let j = 0; j < divArray.length; j++) {
+      if (divArray[j].innerText === questions[zonaQuestion].correct_answer) {
+        divArray[j].classList.add("risposta_corretta");
+      } else {
+        divArray[j].classList.add("risposta_incorretta");
+      }
+    }
+
+    setTimeout(function () {
+      zonaQuestion += 1;
+      if (zonaQuestion < questions.length) {
+        caricoDomanda(); // Ricarica la prossima domanda
+      } else {
+        alert("Hai completato tutte le domande!");
+      }
+    }, 1000); // 1 secondo di pausa
+  }
+});
+
+let timer = 1;
+if (timer === 1) {
+  zonaQuestion += 1;
+  caricoDomanda();
 }
