@@ -179,3 +179,28 @@ if (timer === 1) {
   zonaQuestion += 1;
   caricoDomanda();
 }
+
+// AREA DEL TIMER
+
+// questa funzione richiama un'altra funzione a intervalli di tempo(1000 = 1sec)
+let intervalId = setInterval(countDown, 1000);
+
+//   questa funzione modifica il timer
+function countDown() {
+  const timer = document.getElementById("timer");
+  timer.innerHTML -= 1;
+
+  // grafico che cambia nel tempo
+  const valTimer = (timer.innerHTML / 60) * 100;
+
+  const conic = document.getElementById("conic");
+  conic.style.background = `conic-gradient(from 360deg at 50% 50%, #936799 ${100 - valTimer}%, #073aff00 ${
+    100 - valTimer
+  }%), radial-gradient(75% 75% at 50% 50%, #00ffffff 0%, #00ffffff 100%)`;
+
+  // questo if controlla a che punto è il timer, appuna arriva a 0 con la funzione clearInterval() stoppa la funzionee setIterval()
+  if (timer.innerHTML == 0) {
+    clearInterval(intervalId);
+    //   qui ci dovrebbe andare la parte che nel caso in cui il timer va a 0, ti porta al prossimo round
+  }
+}
