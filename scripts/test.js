@@ -110,6 +110,7 @@ for (let i = 0; i < textBox.length; i++) {
   i--;
 }
 
+// genero le risposte in posizioni random pescando dal randomBox
 for (let i = 0; i < randomBox.length; i++) {
   let div = document.createElement("div");
   div.className = "risposte";

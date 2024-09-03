@@ -16,6 +16,7 @@ body {
   padding: 5% 10%;
   font-family: "Outfit", sans-serif;
   height: 100vh;
+  cursor: default;
 }
 
 body::-webkit-scrollbar {
@@ -41,8 +42,7 @@ main {
   align-items: center;
   justify-content: center;
 }
-
-h1 {
+.h1-jack {
   color: white;
   font-size: 60px;
   font-weight: 500;
@@ -51,13 +51,13 @@ h1 {
 }
 
 @media only screen and (max-width: 767px) {
-  h1 {
+  .h1-jack {
     font-size: 2rem;
     margin-bottom: 20%;
   }
 }
 
-footer {
+.footer-jack {
   text-transform: uppercase;
   color: white;
 }
@@ -98,6 +98,7 @@ footer {
   background-image: linear-gradient(to right, #0b103b, #6f2873);
   color: white;
   padding: 5px;
+  cursor: pointer;
 }
 
 .risposte:hover {
