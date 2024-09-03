@@ -6,7 +6,7 @@
 /* css titolo e sottotitolo */
 
 * {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter";
 }
 
 .title {
@@ -43,7 +43,7 @@
 
 /* dati in percentuale in grassetto */
 .dati .percent {
-  font-family: "Outfit", sans-serif;
+  font-family: "Outfit";
   font-weight: 700;
 }
 
@@ -59,7 +59,7 @@
 
 .Correct figcaption,
 .Wrong figcaption {
-  font-family: "Outfit", sans-serif;
+  font-family: "Outfit";
   margin-top: 5px;
   font-size: 1.4em;
   font-weight: 200;
