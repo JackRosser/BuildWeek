@@ -1,0 +1,64 @@
+body {
+  height: 90vh;
+  width: 99%;
+  background-image: url(./img/bg.jpg);
+  background-size: cover;
+  box-sizing: border-box;
+}
+#center {
+  text-align: center;
+}
+#logo {
+  width: 15rem;
+  height: auto;
+  margin-left: 11rem;
+  margin-top: 3rem;
+}
+
+#h1gabriele {
+  font-size: 60px;
+  color: #edeaf0;
+  margin-block: 9rem 3rem;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+#star-container {
+  margin-block: 2rem 8rem;
+}
+#pgabriele {
+  color: #edeaf0;
+  font-size: 38px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  margin-top: 4rem;
+}
+
+#text {
+  height: auto;
+  width: 58rem;
+  margin-top: 1rem;
+  background: transparent;
+  outline: none;
+  color: #edeaf0;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #d20094;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  margin-top: 3rem;
+}
+#buttongabriele {
+  width: 16rem;
+  height: 4.5rem;
+  margin-top: 4rem;
+  background-color: #00ffff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+#buttongabriele:hover {
+  filter: drop-shadow(1px 1px 20px #00ffff);
+}
