@@ -38,7 +38,7 @@
 /* titolo dei dati */
 .dati h1 {
   font-weight: 400;
-  margin: -9px;
+  margin-block: -9px;
 }
 
 /* dati in percentuale in grassetto */
