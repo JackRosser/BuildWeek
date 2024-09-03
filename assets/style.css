@@ -16,7 +16,7 @@ body {
   padding-top: 2rem;
 }
 
-h1 {
+.h1luigi {
   margin-bottom: 10px;
   font-family: "outfit", sans-serif;
   font-size: 60px;
@@ -24,11 +24,11 @@ h1 {
   margin-right: 70%;
 }
 
-h2 {
+.h2luigi {
   color: #d20094;
 }
 
-h1 > span {
+.h1luigi > span {
   font-weight: 700;
 }
 
@@ -37,7 +37,7 @@ h1 > span {
   align-items: center;
   margin-bottom: 20px;
 }
-.button {
+.button-luigi {
   background-color: #00ffff;
   margin-left: 50%;
   font-weight: 700;
@@ -50,7 +50,7 @@ h1 > span {
   font-size: 20px;
 }
 
-.button:active {
+.button-luigi:active {
   background-color: #00ffff;
   margin-left: 50%;
   font-weight: 700;
@@ -67,6 +67,6 @@ ul {
   line-height: 1.8em;
 }
 
-p {
+.pluigi {
   margin-right: 60%;
 }
