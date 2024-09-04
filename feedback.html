@@ -4,37 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> -->
+    <!-- css link -->
     <link rel="stylesheet" href="./assets/reset.css" />
     <link rel="stylesheet" href="./assets/feedback.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+
     <title>Document</title>
   </head>
+
   <body>
     <header>
-      <img src="./assets/img/epicode_logo.png" id="logo" />
+      <div>
+        <img src="./assets/img/epicode_logo.png" id="logo" />
+      </div>
     </header>
+
+    <!-- main content -->
     <main id="center">
-      <h1 id="h1gabriele">Tell us how it's going</h1>
-      <p id="pgabriele">
-        From 0 to 10, how likely are you to reccomend EPICODE<br />
-        to a friend pr a coleague?
-      </p>
-      <div id="star-container" onmouseover="colorStar(event)"></div>
-      <script type="text/javascript" src="functions.js"></script>
-    </main>
-    <footer id="center">
+      <section>
+        <!-- titolo e sottotitolo -->
+        <h1 id="h1gabriele">Tell us how it's going</h1>
+        <h3 class="h3gabriele">From 0 to 10, how likely are you to reccomend EPICODE to a friend pr a coleague?</h3>
+
+        <!-- stelle feedback -->
+        <div id="star-container" onmouseover="colorStar(event)"></div>
+        <script type="text/javascript" src="functions.js"></script>
+        <h3 class="h3gabriele">Leave us an open feedback about your experience so far</h3>
+      </section>
+
+      <!-- raccolta feedback -->
       <form>
-        <p id="pgabriele">Leave us an open feedback about your experience so far</p>
         <input type="text" id="text" placeholder="Write your comment here" /><br />
-        <button id="buttongabriele">more info</button>
+        <button id="buttongabriele">MORE INFO</button>
       </form>
-    </footer>
+    </main>
+
     <script src="./scripts/feedback.js"></script>
   </body>
 </html>

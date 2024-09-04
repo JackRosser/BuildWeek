@@ -7,8 +7,8 @@ function insertStar() {
     let img = document.createElement("img");
 
     img.src = "assets/img/star.svg";
-    img.width = 90;
-    img.height = 80;
+    img.width = 75;
+    img.height = 65;
     img.id = "star" + i;
     img.style.filter = "opacity(0.1)";
 
