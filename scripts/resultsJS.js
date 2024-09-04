@@ -1,12 +1,14 @@
 // in base alla lunghezza dell'array notiamo il tot domande e tot risposte corrette/sbagliata
-let risposteCorrette = [0, 0, 0, 0];
-let risposteSbagliate = [0, 0];
+// let risposteCorrette = [0, 0, 0, 0];
+// let risposteSbagliate = [0, 0];
 
-console.log(risposteCorrette);
-console.log(risposteSbagliate);
+const risposteCorrette = localStorage.getItem("risposteCorrette");
+const risposteSbagliate = localStorage.getItem("risposteSbagliate");
+console.log(parseInt(risposteCorrette));
+console.log(parseInt(risposteSbagliate));
 
 // tot domande/round
-const totDomande = risposteCorrette.concat(risposteSbagliate);
+const totDomande = localStorage.getItem("totDomande");
 
 // quante corrette e sbagliate
 let corrette = 0;
@@ -15,10 +17,10 @@ let valGrafico = 0;
 
 // funzione che calcola la percentuale in base alle domande corrette
 function calcDomande(numC, numS) {
-  corrette = ((numC / totDomande.length) * 100).toFixed(1);
-  sbagliate = ((numS / totDomande.length) * 100).toFixed(1);
+  corrette = ((numC / totDomande) * 100).toFixed(1);
+  sbagliate = ((numS / totDomande) * 100).toFixed(1);
 }
-calcDomande(risposteCorrette.length, risposteSbagliate.length);
+calcDomande(risposteCorrette, risposteSbagliate);
 
 // ci calcoliamo il valore da inserire per modificare il grafico
 valGrafico = Math.ceil((360 * sbagliate) / 100);
@@ -32,8 +34,8 @@ console.log(percentCorrect[0].innerText);
 
 // inserisco il resoconto domande azzeccate su tot nel testo sotto la percentuale
 const resoConto = document.querySelectorAll("figcaption");
-resoConto[0].innerText = `${risposteCorrette.length}/${totDomande.length} questions`;
-resoConto[1].innerText = `${risposteSbagliate.length}/${totDomande.length} questions`;
+resoConto[0].innerText = `${risposteCorrette}/${totDomande} questions`;
+resoConto[1].innerText = `${risposteSbagliate}/${totDomande} questions`;
 
 // creazione grafico a donut in base alle percentuale domande
 const grafico = document.getElementById("grafico");

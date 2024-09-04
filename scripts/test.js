@@ -92,9 +92,9 @@ const questions = [
 let zonaQuestion = 0;
 let endFooter = document.getElementById("endfooter");
 
-lengthQuestions = questions.length;
-
-endFooter.innerText = lengthQuestions;
+let totDomande = questions.length;
+localStorage.setItem("totDomande", totDomande);
+endFooter.innerText = totDomande;
 
 // definisco la funzione per caricare la domanda
 
@@ -176,8 +176,8 @@ function countDown() {
 caricoDomanda();
 // qui inizia la parte relativa alla raccolta dati del form
 
-let risposteCorrette = [];
-let risposteSbagliate = [];
+let risposteCorrette = 0;
+let risposteSbagliate = 0;
 
 //______________________________
 form.addEventListener("click", function (e) {
@@ -185,9 +185,10 @@ form.addEventListener("click", function (e) {
     e.preventDefault();
 
     if (e.target.innerText === questions[zonaQuestion].correct_answer) {
-      risposteCorrette.push(0);
+      risposteCorrette += 1;
+      console.log(risposteCorrette);
     } else {
-      risposteSbagliate.push(0);
+      risposteSbagliate += 1;
     }
 
     // Verifica la risposta
@@ -206,13 +207,13 @@ form.addEventListener("click", function (e) {
       if (zonaQuestion < questions.length) {
         caricoDomanda(); // Ricarica la prossima domanda
       } else {
+        localStorage.setItem("risposteCorrette", risposteCorrette);
+        localStorage.setItem("risposteSbagliate", risposteSbagliate);
         window.location.href = "Results.html";
       }
     }, 1000); // 1 secondo di pausa
   }
 });
-
-console.log(risposteCorrette);
 
 // let timer = 1;
 // if (timer === 1) {
