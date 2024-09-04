@@ -1,6 +1,14 @@
-const chartData = {
-  data: [0, 0]
-};
+// in base alla lunghezza dell'array notiamo il tot domande e tot risposte corrette/sbagliata
+// let risposteCorrette = [0, 0, 0, 0];
+// let risposteSbagliate = [0, 0];
+
+const risposteCorrette = localStorage.getItem("risposteCorrette");
+const risposteSbagliate = localStorage.getItem("risposteSbagliate");
+console.log(parseInt(risposteCorrette));
+console.log(parseInt(risposteSbagliate));
+
+// tot domande/round
+const totDomande = localStorage.getItem("totDomande");
 
 // quante corrette e sbagliate
 let corrette = 0;
@@ -8,9 +16,10 @@ let sbagliate = 0;
 
 // funzione che calcola la percentuale in base alle domande corrette
 function calcDomande(numC, numS) {
-  corrette = Math.round((numC / 6) * 100);
-  sbagliate = Math.round((numS / 6) * 100);
+  corrette = ((numC / totDomande) * 100).toFixed(1);
+  sbagliate = ((numS / totDomande) * 100).toFixed(1);
 }
+calcDomande(risposteCorrette, risposteSbagliate);
 
 calcDomande(4, 2);
 //  inserisco i dati nelle risorse del grafico
@@ -22,8 +31,10 @@ percentCorrect[0].innerHTML = corrette + "%";
 percentCorrect[1].innerHTML = sbagliate + "%";
 console.log(percentCorrect[0].innerHTML);
 
-// creazione grafico a donut
-const myChart = document.getElementById("myChart");
+// inserisco il resoconto domande azzeccate su tot nel testo sotto la percentuale
+const resoConto = document.querySelectorAll("figcaption");
+resoConto[0].innerText = `${risposteCorrette}/${totDomande} questions`;
+resoConto[1].innerText = `${risposteSbagliate}/${totDomande} questions`;
 
 new Chart(myChart, {
   type: "doughnut",
