@@ -1,6 +1,6 @@
 // in base alla lunghezza dell'array notiamo il tot domande e tot risposte corrette/sbagliata
-// let risposteCorrette = sessionStorage.getItem("risposteCorrette");
-// let risposteSbagliate = sessionStorage.getItem("risposteSbagliate");
+let risposteCorrette = [0, 0, 0, 0];
+let risposteSbagliate = [0, 0];
 
 console.log(risposteCorrette);
 console.log(risposteSbagliate);
