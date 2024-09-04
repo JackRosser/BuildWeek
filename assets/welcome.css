@@ -94,7 +94,7 @@ label {
   appearance: none;
   background-color: transparent;
   border: solid 1px white;
-  cursor: pointe;
+  cursor: pointer;
 }
 
 #promise:checked {
@@ -113,4 +113,11 @@ label {
 }
 .hidden {
   display: none;
+}
+
+.checkboxLuigi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 26%;
 }
