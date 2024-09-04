@@ -4,22 +4,36 @@
   font-family: "Inter", sans-serif;
 }
 
+header {
+  text-align: left;
+  margin-top: 20px;
+  height: 120px;
+}
+
+header div {
+  text-align: left;
+}
+
+#logo {
+  display: inline-block;
+  height: 40px;
+  margin-top: 40px;
+}
+
 body {
+  margin: 0;
   height: 100vh;
-  width: 99%;
   background-image: url(./img/bg.jpg);
   background-size: cover;
   box-sizing: border-box;
 }
+
+header,
 main,
 footer {
   text-align: center;
-}
-#logo {
-  width: 15rem;
-  height: auto;
-  margin-left: 11rem;
-  margin-top: 3rem;
+  margin: auto;
+  width: 1060px;
 }
 
 h1 {

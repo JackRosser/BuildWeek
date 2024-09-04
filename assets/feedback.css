@@ -1,64 +1,74 @@
-body {
-  height: 90vh;
-  width: 99%;
-  background-image: url(./img/bg.jpg);
-  background-size: cover;
-  box-sizing: border-box;
-}
-#center {
-  text-align: center;
-}
-#logo {
-  width: 15rem;
-  height: auto;
-  margin-left: 11rem;
-  margin-top: 3rem;
+/* font */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+/* colore font */
+* {
+  color: white;
 }
 
+section {
+  box-sizing: border-box;
+  padding-inline: 80px;
+}
+
+/* titolo e sottotitolo */
 #h1gabriele {
   font-size: 60px;
-  color: #edeaf0;
-  margin-block: 9rem 3rem;
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-family: "Outfit";
   font-weight: 700;
   font-style: normal;
 }
-#star-container {
-  margin-block: 2rem 8rem;
-}
-#pgabriele {
-  color: #edeaf0;
-  font-size: 38px;
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
+
+.h3gabriele {
+  font-size: 2.2rem;
+  font-family: "Outfit";
   font-weight: 300;
-  font-style: normal;
-  margin-top: 4rem;
+  box-sizing: border-box;
+  padding-inline: 5px;
+  margin-top: 1rem;
 }
 
+/* margin delle stelline */
+#star-container {
+  margin-block: 3rem 5.5rem;
+}
+
+/* stile text dell'input */
 #text {
   height: auto;
   width: 58rem;
   margin-top: 1rem;
   background: transparent;
   outline: none;
-  color: #edeaf0;
   font-size: 18px;
   border: none;
   border-bottom: 1px solid #d20094;
-  padding-left: 2rem;
-  padding-bottom: 1rem;
+  box-sizing: border-box;
+  padding-inline: 1.6rem;
+  padding-bottom: 0.8rem;
   margin-top: 3rem;
 }
+
+/* button more info */
 #buttongabriele {
-  width: 16rem;
-  height: 4.5rem;
+  color: black;
+  font-family: "Inter";
+  font-size: 1.4rem;
+  font-weight: 800;
+  padding-block: 0.8rem;
+  padding-inline: 3rem;
   margin-top: 4rem;
   background-color: #00ffff;
-  font-size: 2rem;
+  border: 0;
+
+  filter: drop-shadow(0px 0px 5px #00ffff);
   cursor: pointer;
 }
 #buttongabriele:hover {
-  filter: drop-shadow(1px 1px 20px #00ffff);
+  transition: 200ms;
+  filter: drop-shadow(1px 1px 10px #00ffff);
 }

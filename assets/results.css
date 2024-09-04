@@ -29,6 +29,11 @@
   top: 0;
   bottom: 0;
   margin: auto;
+  /* css dati delle risposte correct, wrong */
+}
+.dati div {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* titolo dei dati */
@@ -46,6 +51,14 @@
   text-align: left;
   margin-inline: 5rem;
   margin-block: 3rem;
+  width: 200px;
+  margin-right: 130px;
+}
+
+.Wrong {
+  text-align: right;
+  width: 200px;
+  margin-left: 130px;
 }
 
 .Correct figcaption,
