@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="assets/results.css" />
+    <title>ResultsPage</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="assets/img/epicode_logo.png" alt="epicode_logo" id="logo" />
+      </div>
+    </header>
+
+    <main id="ResultsMain">
+      <!-- blocco titolo e sottotitolo -->
+      <section class="title">
+        <h1 class="titleRes">Results</h1>
+        <h4>The summary of your answers:</h4>
+      </section>
+
+      <!-- sezzione corrette -->
+      <section class="dati">
+        <div class="Correct">
+          <h1>Correct</h1>
+          <h1 class="percent"></h1>
+          <figcaption>questions</figcaption>
+        </div>
+
+        <!-- grafico -->
+
+        <div id="grafico">
+          <!-- p con grafico a torta -->
+          <article id="textIntoG">
+            <div>
+              <h5>Congratulations!</h5>
+              <h5><span>You passed the exam.</span></h5>
+            </div>
+            <p>We'll send you the certificate in few minutes.</p>
+            <p>Check your email (including promotions / spam folder)</p>
+          </article>
+        </div>
+
+        <!-- sezzione sbagliate -->
+        <div class="Wrong">
+          <h1>Wrong</h1>
+          <h1 class="percent"></h1>
+          <figcaption>questions</figcaption>
+        </div>
+      </section>
+
+      <!-- BUTTON -->
+      <div id="buttonConteiner">
+        <input type="button" value="RATE US" id="rateUs" />
+      </div>
+    </main>
+
+    <script src="./scripts/resultsJS.js"></script>
+  </body>
+</html>
