@@ -1,0 +1,33 @@
+/* colore e font di base per i testi */
+* {
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 99%;
+  background-image: url(./img/bg.jpg);
+  background-size: cover;
+  box-sizing: border-box;
+}
+main,
+footer {
+  text-align: center;
+}
+#logo {
+  width: 15rem;
+  height: auto;
+  margin-left: 11rem;
+  margin-top: 3rem;
+}
+
+h1 {
+  font-size: 60px;
+  color: #edeaf0;
+  margin-top: 10rem;
+}
+
+p {
+  color: #edeaf0;
+}

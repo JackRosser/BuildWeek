@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/style.css" />
+    <<<<<<< HEAD =======
+    <link rel="stylesheet" href="assets/results.css" />
+    >>>>>>> FEATURE-resultsPage-GIUSEPPE
     <title>ResultsPage</title>
   </head>
   <body>
@@ -14,24 +17,47 @@
     <main id="ResultsMain">
       <!-- blocco titolo e sottotitolo -->
       <section class="title">
-        <h1>results</h1>
-        <h4>The summary Of your answers:</h4>
+        <h1 class="titleRes">Results</h1>
+        <h4>The summary of your answers:</h4>
       </section>
 
-      <!-- sezzione risposte -->
+      <!-- sezzione corrette -->
       <section class="dati">
-        <h1>Correct</h1>
-        <!-- p con grafico a torta -->
-        <article>
-          <h5>Congratulations!</h5>
-          <h5>You passed the exam.</h5>
-          <p>We'll send you the certificate in few minutes. Check your email (including promotions / spam folder)</p>
-        </article>
-        <h1>Wrong</h1>
+        <div class="Correct">
+          <h1>Correct</h1>
+          <h1 class="percent"></h1>
+          <figcaption>questions</figcaption>
+        </div>
+
+        <!-- grafico -->
+
+        <div id="grafico">
+          <!-- p con grafico a torta -->
+          <article id="textIntoG">
+            <div>
+              <h5>Congratulations!</h5>
+              <h5><span>You passed the exam.</span></h5>
+            </div>
+            <p>We'll send you the certificate in few minutes.</p>
+            <p>Check your email (including promotions / spam folder)</p>
+          </article>
+        </div>
+
+        <!-- sezzione sbagliate -->
+        <div class="Wrong">
+          <h1>Wrong</h1>
+          <h1 class="percent"></h1>
+          <figcaption>questions</figcaption>
+        </div>
       </section>
 
       <!-- BUTTON -->
-      <div><input type="button" value="RATE US" /></div>
+      <div id="buttonConteiner">
+        <input type="button" value="RATE US" id="rateUs" />
+      </div>
     </main>
+
+    <script src="/scripts/resultsJS.js"></script>
+    >>>>>>> FEATURE-resultsPage-GIUSEPPE
   </body>
 </html>
