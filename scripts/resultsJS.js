@@ -1,7 +1,8 @@
 // array resoconto domande
 // in base alla lunghezza dell'array notiamo il tot domande e tot risposte corrette/sbagliata
-const risposteCorrette = [0, 0, 0, 0];
-const risposteSbagliate = [0, 0];
+// const risposteCorrette = [0, 0, 0, 0];
+// const risposteSbagliate = [0, 0];
+
 // tot domande/round
 const totDomande = risposteCorrette.concat(risposteSbagliate);
 
