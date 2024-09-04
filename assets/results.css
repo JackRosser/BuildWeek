@@ -1,71 +1,66 @@
-/* css font Results page */
+/* css Results page */
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+/* css titolo e sottotitolo */
 
-* {
-  font-family: "Inter";
-}
-
-/* sezione titolo sottotitolo */
 .title {
-  margin-bottom: 55px;
+  margin-bottom: 80px;
 }
 
 .titleRes {
-  font-size: 60px;
+  font-size: 4rem;
   margin-top: 10px;
   margin-bottom: 0px;
 }
 
 #ResultsMain h4 {
-  font-size: 1.9rem;
+  font-size: 2rem;
   font-weight: 400;
   margin: 0;
   margin-bottom: 5px;
   display: inline-block;
 }
 
-/* css dati delle risposte correct, wrong */
-
-.dati div {
-  display: inline-block;
-  vertical-align: middle;
-  margin-inline: 50px;
+/* css datti risposte correct wrong */
+.dati {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 /* titolo dei dati */
 .dati h1 {
   font-weight: 400;
-  margin-block: -9px;
+  margin: -9px;
 }
 
 /* dati in percentuale in grassetto */
-.dati .percent {
-  font-family: "Outfit";
+.dati span {
   font-weight: 700;
 }
 
-/* conteiner di gruppo correct e wrong */
 .Correct {
   text-align: left;
-  width: 200px;
-}
-
-.Wrong {
-  text-align: right;
-  width: 200px;
+  margin-inline: 5rem;
+  margin-block: 3rem;
 }
 
 .Correct figcaption,
 .Wrong figcaption {
-  font-family: "Outfit";
-  margin-top: 5px;
   font-size: 1.4em;
   font-weight: 200;
 }
 
-/* sezione grafico a ciambella e testo all'interno */
+.Wrong {
+  text-align: right;
+  margin-inline: 5rem;
+  margin-block: 3rem;
+}
+
+/* css text con grafico a donut */
 #textIntoG {
   width: 240px;
   height: 160px;
@@ -78,56 +73,37 @@
 }
 
 #textIntoG h5 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0;
   margin-bottom: 5px;
-}
-
-#textIntoG div {
-  margin-inline: 0;
-  margin-bottom: 1.2em;
 }
 
 #textIntoG span {
   color: #00ffff;
 }
 
-#textIntoG p {
-  margin: 0;
-  padding-inline: 5px;
-}
-
-/* grafico  */
-
-#grafico {
-  width: 390px;
-  height: 390px;
-  /* background: conic-gradient(#d20094 120deg, #00ffff 120deg 360deg); */
-  border-radius: 50%;
-  position: relative;
-  box-shadow: 0px 0px 25px 7px #00000087;
-}
-
-#grafico::before {
-  content: "";
-  width: 280px;
-  height: 280px;
-
-  /* trasparenza simulata */
-  background-image: url(./img/bg.jpg);
-  background-position: center;
-
-  border-radius: 50%;
+/* grafico */
+#myChart {
+  height: 400px;
+  width: 400px;
+  border: none;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: inset 0px 0px 25px 7px #00000087;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 /* button rate us */
 #buttonConteiner {
-  margin-top: 60px;
+  margin-top: 100px;
+  /* position: absolute;
+    left: 0;
+    right: 0;
+    top: 80%;
+    bottom: 0;
+    margin: auto; */
 }
 
 #rateUs {
@@ -144,9 +120,16 @@
   transition: 200ms;
   font-size: 1.3rem;
   font-weight: 800;
+  /* background: rgb(240, 240, 240); */
   border: 2px solid #00ffff78;
   padding-inline: 3em;
   padding-block: 0.8em;
   box-shadow: inset 0px 0px 20px 0px #00ffff78;
   /* box-shadow: 0px 0px 0px 0px #00ffff78; */
+}
+
+#spazio {
+  min-width: 1000px;
+  max-width: 1300px;
+  margin: auto;
 }
