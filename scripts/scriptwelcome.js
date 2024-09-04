@@ -20,3 +20,7 @@ button.addEventListener("click", function () {
     btn.classList.remove("illuminated");
   }
 });
+
+button.addEventListener("click", () => {
+  window.location.href = "test.html";
+});
