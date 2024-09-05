@@ -78,3 +78,39 @@
     margin: 0;
   }
 }
+
+/* MODIFICHE___________________________________________ */
+
+#conic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0px 0px 25px 7px #00000087;
+  background-color: transparent; /* Rendi trasparente l'area principale del timer */
+}
+
+#conic::before {
+  content: "";
+  width: 120px;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.1); /* Trasparenza maggiore, in modo che il background si veda */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0px 0px 25px 7px rgba(0, 0, 0, 0.5); /* Ombra interna trasparente */
+}
+
+@media only screen and (max-width: 767px) {
+  #conic {
+    width: 90px;
+    height: 90px;
+  }
+  #conic::before {
+    width: 72px;
+    height: 72px;
+    background-color: rgba(255, 255, 255, 0.1); /* Trasparenza maggiore su dispositivi mobili */
+  }
+}
