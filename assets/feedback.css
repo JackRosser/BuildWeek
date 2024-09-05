@@ -35,6 +35,7 @@ section {
 /* margin delle stelline */
 #star-container {
   margin-block: 3rem 5.5rem;
+  cursor: pointer;
 }
 
 /* stile text dell'input */

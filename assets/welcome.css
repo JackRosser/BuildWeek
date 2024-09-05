@@ -18,12 +18,22 @@ body {
   margin: auto;
   height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: center;
+  flex-direction: column;
 }
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+header {
+  width: 100%;
+  height: 20%;
+}
+
+header img {
+  height: 40px;
 }
 
 .logoepicode > img {
@@ -35,7 +45,7 @@ body::-webkit-scrollbar {
 .h1luigi {
   margin-bottom: 10px;
   font-family: "outfit", sans-serif;
-  font-size: 60px;
+  font-size: 80px;
   font-weight: 400;
   margin-right: 70%;
   line-height: 0.7;
@@ -110,6 +120,7 @@ label {
   background-color: transparent;
   border: solid 1px white;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 #promise:checked {
