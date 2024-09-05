@@ -22,5 +22,5 @@ button.addEventListener("click", function () {
 });
 
 button.addEventListener("click", () => {
-  window.location.href = "test.html";
+  window.location.href = "difficolta.html";
 });
