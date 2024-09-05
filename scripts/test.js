@@ -275,19 +275,19 @@ let zonaQuestion = 0;
 document.getElementById("easyButton").addEventListener("click", function () {
   currentQuestions = questions;
   zonaQuestion = 0;
-  caricoDomanda(); // Carica la prima domanda dell'array selezionato
+  caricoDomanda();
 });
 
 document.getElementById("normalButton").addEventListener("click", function () {
   currentQuestions = normalQuestion[0].results;
   zonaQuestion = 0;
-  caricoDomanda(); // Carica la prima domanda dell'array selezionato
+  caricoDomanda();
 });
 
 document.getElementById("hardButton").addEventListener("click", function () {
   currentQuestions = hardQuestion[0].results;
   zonaQuestion = 0;
-  caricoDomanda(); // Carica la prima domanda dell'array selezionato
+  caricoDomanda();
 });
 
 //____________________________________________________
@@ -306,42 +306,48 @@ let resetTimer = function () {
   intervalId = setInterval(countDown, 1000); // Riavvia il conto alla rovescia
 };
 
+// Modifica la funzione caricoDomanda per usare currentQuestions
 function caricoDomanda() {
-  h1.innerText = questions[zonaQuestion].question;
-  let textBox = [];
-  let randomBox = [];
+  if (zonaQuestion < currentQuestions.length) {
+    h1.innerText = currentQuestions[zonaQuestion].question;
+    let textBox = [];
+    let randomBox = [];
 
-  let numberFooter = document.getElementById("number-question");
-  let calcFooter = parseInt(zonaQuestion) + 1;
-  numberFooter.innerText = calcFooter;
+    let numberFooter = document.getElementById("number-question");
+    let calcFooter = parseInt(zonaQuestion) + 1;
+    numberFooter.innerText = calcFooter;
 
-  form.innerHTML = ""; // Svuota le risposte precedenti
+    form.innerHTML = ""; // Svuota le risposte precedenti
 
-  for (let j = 0; j < questions[zonaQuestion].incorrect_answers.length; j++) {
-    textBox.push(questions[zonaQuestion].incorrect_answers[j]);
-  }
-  textBox.push(questions[zonaQuestion].correct_answer);
+    for (let j = 0; j < currentQuestions[zonaQuestion].incorrect_answers.length; j++) {
+      textBox.push(currentQuestions[zonaQuestion].incorrect_answers[j]);
+    }
+    textBox.push(currentQuestions[zonaQuestion].correct_answer);
 
-  // Randomizza le risposte
-  while (textBox.length) {
-    let randomNum = Math.floor(Math.random() * textBox.length);
-    randomBox.push(textBox.splice(randomNum, 1));
-  }
+    // Randomizza le risposte
+    while (textBox.length) {
+      let randomNum = Math.floor(Math.random() * textBox.length);
+      randomBox.push(textBox.splice(randomNum, 1));
+    }
 
-  for (let i = 0; i < randomBox.length; i++) {
-    let div = document.createElement("div");
-    div.className = "risposte";
-    let button = document.createElement("button");
-    button.name = "answer";
-    button.innerText = randomBox[i];
-    div.appendChild(button);
-    form.appendChild(div);
+    for (let i = 0; i < randomBox.length; i++) {
+      let div = document.createElement("div");
+      div.className = "risposte";
+      let button = document.createElement("button");
+      button.name = "answer";
+      button.innerText = randomBox[i];
+      div.appendChild(button);
+      form.appendChild(div);
 
-    // Rendi l'intero div cliccabile
-    div.addEventListener("click", function (e) {
-      e.preventDefault();
-      handleAnswerClick(div, button.innerText);
-    });
+      // Rendi l'intero div cliccabile
+      div.addEventListener("click", function (e) {
+        e.preventDefault();
+        handleAnswerClick(div, button.innerText);
+      });
+    }
+  } else {
+    // Se non ci sono più domande, vai ai risultati
+    window.location.href = "Results.html";
   }
 }
 
@@ -349,7 +355,7 @@ function handleAnswerClick(divClicked, answerText) {
   clearInterval(intervalId); // Ferma il timer quando viene data una risposta
 
   // Controlla la risposta
-  let correctAnswer = questions[zonaQuestion].correct_answer;
+  let correctAnswer = currentQuestions[zonaQuestion].correct_answer;
   let allButtons = document.querySelectorAll(".risposte");
 
   allButtons.forEach((div) => {
@@ -363,7 +369,7 @@ function handleAnswerClick(divClicked, answerText) {
 
   setTimeout(function () {
     zonaQuestion += 1;
-    if (zonaQuestion < questions.length) {
+    if (zonaQuestion < currentQuestions.length) {
       resetTimer(); // Reset del timer e carica la prossima domanda
       caricoDomanda();
     } else {
@@ -392,7 +398,7 @@ function countDown() {
 
   if (timeLeft == 0) {
     zonaQuestion += 1;
-    if (zonaQuestion < questions.length) {
+    if (zonaQuestion < currentQuestions.length) {
       resetTimer();
       caricoDomanda();
     } else {
