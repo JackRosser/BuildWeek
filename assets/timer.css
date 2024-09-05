@@ -114,3 +114,25 @@
     background-color: rgba(255, 255, 255, 0.1); /* Trasparenza maggiore su dispositivi mobili */
   }
 }
+
+#conic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  background: conic-gradient(#00aaff 0%, #00aaff 100%); /* Cerchio fisso azzurro */
+  box-shadow: 0px 0px 25px 7px #00000087;
+}
+
+#conic::before {
+  content: "";
+  width: 120px;
+  height: 120px;
+  background-color: #2f1f59; /* Colore del centro del cerchio */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0px 0px 25px 7px rgba(0, 0, 0, 0.5);
+}

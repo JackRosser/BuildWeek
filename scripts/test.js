@@ -173,12 +173,25 @@ function handleAnswerClick(divClicked, answerText) {
 
 // Funzione conto alla rovescia
 function countDown() {
-  timerElement.innerHTML -= 1;
+  let timeLeft = (timerElement.innerHTML -= 1);
 
-  if (timerElement.innerHTML == 0) {
+  // Percentuale del tempo rimasto
+  let percentage = (timeLeft / 60) * 100;
+
+  // Calcola l'angolo per il conic-gradient
+  let angle = (360 * percentage) / 100;
+
+  // Aggiorna il background del cerchio, mantenendo il bordo fisso
+  const conic = document.getElementById("conic");
+  conic.style.background = `conic-gradient(
+    #2f1f59 ${angle}deg,
+    #00aaff ${angle}deg
+  )`; // Lo sfondo "mangia" l'interno, lasciando il bordo azzurro
+
+  if (timeLeft == 0) {
     zonaQuestion += 1;
     if (zonaQuestion < questions.length) {
-      resetTimer(); // Resetta il timer e carica la prossima domanda
+      resetTimer();
       caricoDomanda();
     } else {
       clearInterval(intervalId);
