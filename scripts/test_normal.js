@@ -160,6 +160,13 @@ function handleAnswerClick(divClicked, answerText) {
     }
   });
 
+  // registra le risposte corrette o sbagliate
+  if (answerText === correctAnswer) {
+    risposteCorrette++;
+  } else {
+    risposteSbagliate++;
+  }
+
   setTimeout(function () {
     zonaQuestion += 1;
     if (zonaQuestion < questions.length) {
@@ -167,6 +174,8 @@ function handleAnswerClick(divClicked, answerText) {
       caricoDomanda();
     } else {
       clearInterval(intervalId);
+      localStorage.setItem("risposteCorrette", risposteCorrette);
+      localStorage.setItem("risposteSbagliate", risposteSbagliate);
       window.location.href = "Results.html";
     }
   }, 1000); // Pausa di 1 secondo prima di passare alla domanda successiva
