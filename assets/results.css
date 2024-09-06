@@ -106,7 +106,7 @@
   /* background: conic-gradient(#d20094 120deg, #00ffff 120deg 360deg); */
   border-radius: 50%;
   position: relative;
-  box-shadow: 0px 0px 25px 7px #00000087;
+  box-shadow: 0px 0px 12px 0px #00000087;
 }
 
 #grafico::before {
@@ -123,7 +123,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: inset 0px 0px 25px 7px #00000087;
+  box-shadow: inset 0px 0px 14px 0px #00000087;
 }
 
 /* button rate us */

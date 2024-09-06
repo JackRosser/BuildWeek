@@ -3,30 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome</title>
+    <link rel="stylesheet" href="assets/style.css" />
     <link rel="stylesheet" href="./assets/welcome.css" />
+    <title>EpicodeQuiz</title>
   </head>
   <body>
     <header>
-      <img src="./assets/img/epicode_logo.png" alt="epicoe logo" />
+      <div>
+        <img src="./assets/img/epicode_logo.png" alt="epicoe logo" id="logo" />
+      </div>
     </header>
     <main>
-      <h1 class="h1luigi">Welcome to <span> your exam</span></h1>
+      <!-- titolo -->
+
+      <div>
+        <h1>Welcome to</h1>
+        <h1 class="h1luigi">your exam</h1>
+      </div>
+      <!-- sottotitolo -->
       <h2 class="h2luigi">Instructions</h2>
       <p class="pluigi">We don't expect most engineers to know the answers to all of these questions, so don't worry if you're unsure of a few of them.</p>
+      <!-- lista -->
       <ul>
-        <li>Each question is timed and can only be answered once.</li>
-        <li>Changing browser tab or opening other windows will invalidate the question.</li>
+        <li>Each question is timed and can only be <strong>answered once.</strong></li>
+        <li>Changing browser tab or opening other windows will <strong>invalidate the question.</strong></li>
         <li>This exam will take approx. <strong>0-5 minutes</strong>.</li>
       </ul>
+
+      <section class="footer-Luigi">
+        <!-- checknox -->
+        <div class="checkboxLuigi">
+          <div>
+            <input type="checkbox" id="promise" />
+            <label for="promise">I promise to answer myself without help from anyone</label>
+          </div>
+          <button class="button-luigi" id="buttonLuigi" disabled>PROCEED</button>
+        </div>
+      </section>
     </main>
-    <footer class="footer-Luigi">
-      <div class="checkboxLuigi">
-        <input type="checkbox" id="promise" />
-        <label for="promise">I promise to answer myself without help from anyone</label>
-        <button class="button-luigi" id="buttonLuigi" disabled>PROCEED</button>
-      </div>
-    </footer>
     <script src="./scripts/scriptwelcome.js"></script>
   </body>
 </html>

@@ -87,6 +87,9 @@ const questions = [
   }
 ];
 
+//______________________________________________
+let mark = document.getElementById("endfooter");
+mark.innerText = questions.length;
 //____________________________________________________
 
 let zonaQuestion = 0;
