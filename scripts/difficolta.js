@@ -18,3 +18,6 @@ const hardButton = document.getElementById("hardButton");
 hardButton.addEventListener("click", () => {
   window.location.href = "hard.html";
 });
+
+const Quanti = document.getElementById("quantity");
+console.log(Quanti.value);
