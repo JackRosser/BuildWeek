@@ -8,7 +8,7 @@ h1 {
 }
 
 header {
-  margin-bottom: 8rem;
+  margin-bottom: 7rem;
 }
 
 section div {
@@ -47,4 +47,27 @@ section div {
 
 #hardButton {
   background-color: red;
+}
+
+.menu {
+  text-align: center;
+  vertical-align: middle;
+}
+
+label {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#quantity {
+  text-align: center;
+  color: black;
+  border-radius: 50px;
+  border: 0;
+  margin-left: 1rem;
+  font-family: "Outfit";
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-block: 0.5rem;
+  padding-inline: 0.4rem;
 }

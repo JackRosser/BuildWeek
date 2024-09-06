@@ -7,21 +7,20 @@
   align-items: center;
   justify-content: center;
 }
-
+/* 
 #conic {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   position: relative;
   box-shadow: 0px 0px 25px 7px #00000087;
-}
+} */
 /* background-image: conic-gradient(from 360deg at 50% 50%, #e7ecf4ff 10%, #073aff00 10%), radial-gradient(75% 75% at 50% 50%, #00ffffff 0%, #00ffffff 100%); */
 
-#conic::before {
+/* #conic::before {
   content: "";
   width: 120px;
   height: 120px;
-  /* trasparenza simulata */
   background-color: #703090;
 
   border-radius: 50%;
@@ -30,7 +29,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: inset 0px 0px 25px 7px #00000087;
-}
+} */
 
 @media only screen and (max-width: 767px) {
   #conic {
@@ -86,7 +85,7 @@
   height: 150px;
   border-radius: 50%;
   position: relative;
-  box-shadow: 0px 0px 25px 7px #00000087;
+  box-shadow: 0px 0px 14px 0px #00000087;
   background-color: transparent; /* Rendi trasparente l'area principale del timer */
 }
 
@@ -121,18 +120,18 @@
   border-radius: 50%;
   position: relative;
   background: conic-gradient(#00aaff 0%, #00aaff 100%); /* Cerchio fisso azzurro */
-  box-shadow: 0px 0px 25px 7px #00000087;
+  box-shadow: 0px 0px 12px 0px #00000087;
 }
 
 #conic::before {
   content: "";
   width: 120px;
   height: 120px;
-  background-color: #2f1f59; /* Colore del centro del cerchio */
+  background-color: #6c2873; /* Colore del centro del cerchio */
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: inset 0px 0px 25px 7px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
 }
