@@ -47,3 +47,31 @@ function selectStars(event) {
 }
 
 window.onload = insertStar;
+
+function submitFeedback(event) {
+  event.preventDefault();
+
+  const feedbackText = document.getElementById("text").value;
+  const feedbackDiv = document.createElement("div");
+  const mainContent = document.getElementById("center");
+
+  if (selectedStars <= 4) {
+    feedbackDiv.style.backgroundColor = "red";
+    feedbackDiv.style.color = "white";
+    feedbackDiv.style.padding = "1rem";
+    feedbackDiv.style.marginTop = "2rem";
+    feedbackDiv.innerText = "Ci dispiace per la tua bassa valutazione, faremo del nostro meglio per migliorare";
+  } else {
+    feedbackDiv.style.backgroundColor = "green";
+    feedbackDiv.style.color = "white";
+    feedbackDiv.style.padding = "1rem";
+    feedbackDiv.style.marginTop = "2rem";
+    feedbackDiv.innerText = "Grazie per il tuo feedback";
+  }
+
+  mainContent.appendChild(feedbackDiv);
+
+  setTimeout(() => {
+    window.location.href = "welcome.html";
+  }, 2000);
+}
