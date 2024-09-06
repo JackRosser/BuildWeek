@@ -11,7 +11,7 @@ const questions = [
     category: "Science: Computers",
     question: "What was the name of the security vulnerability found in Bash in 2014?",
     correct_answer: "Shellshock",
-    incorrect_answers: ["Heartbleed", "Bashbug", "Stagefright"],
+    incorrect_answers: ["Heartbleed", "Bashbug", "Stagefright"]
   },
   {
     type: "multiple",
@@ -19,7 +19,7 @@ const questions = [
     category: "Science: Computers",
     question: "What internet protocol was documented in RFC 1459?",
     correct_answer: "IRC",
-    incorrect_answers: ["HTTP", "HTTPS", "FTP"],
+    incorrect_answers: ["HTTP", "HTTPS", "FTP"]
   },
   {
     type: "multiple",
@@ -27,7 +27,7 @@ const questions = [
     category: "Science: Computers",
     question: "Which kind of algorithm is Ron Rivest not famous for creating?",
     correct_answer: "Secret sharing scheme",
-    incorrect_answers: ["Hashing algorithm", "Asymmetric encryption", "Stream cipher"],
+    incorrect_answers: ["Hashing algorithm", "Asymmetric encryption", "Stream cipher"]
   },
   {
     type: "multiple",
@@ -35,7 +35,7 @@ const questions = [
     category: "Science: Computers",
     question: "What is the name of the process that sends one qubit of information using two bits of classical information?",
     correct_answer: "Quantum Teleportation",
-    incorrect_answers: ["Super Dense Coding", "Quantum Entanglement", "Quantum Programming"],
+    incorrect_answers: ["Super Dense Coding", "Quantum Entanglement", "Quantum Programming"]
   },
   {
     type: "multiple",
@@ -43,7 +43,7 @@ const questions = [
     category: "Science: Computers",
     question: "According to DeMorgan&#039;s Theorem, the Boolean expression (AB)&#039; is equivalent to:",
     correct_answer: "A&#039; + B&#039;",
-    incorrect_answers: ["A&#039;B + B&#039;A", "A&#039;B&#039;", "AB&#039; + AB"],
+    incorrect_answers: ["A&#039;B + B&#039;A", "A&#039;B&#039;", "AB&#039; + AB"]
   },
   {
     type: "multiple",
@@ -51,7 +51,7 @@ const questions = [
     category: "Science: Computers",
     question: "Which of these is not a layer in the OSI model for data communications?",
     correct_answer: "Connection Layer",
-    incorrect_answers: ["Application Layer", "Transport Layer", "Physical Layer"],
+    incorrect_answers: ["Application Layer", "Transport Layer", "Physical Layer"]
   },
   {
     type: "multiple",
@@ -59,7 +59,7 @@ const questions = [
     category: "Science: Computers",
     question: "Released in 2001, the first edition of Apple&#039;s Mac OS X operating system (version 10.0) was given what animal code name?",
     correct_answer: "Cheetah",
-    incorrect_answers: ["Puma", "Tiger", "Leopard"],
+    incorrect_answers: ["Puma", "Tiger", "Leopard"]
   },
   {
     type: "multiple",
@@ -67,7 +67,7 @@ const questions = [
     category: "Science: Computers",
     question: "Which of these Cherry MX mechanical keyboard switches is both tactile and clicky?",
     correct_answer: "Cherry MX Blue",
-    incorrect_answers: ["Cherry MX Black", "Cherry MX Red", "Cherry MX Brown"],
+    incorrect_answers: ["Cherry MX Black", "Cherry MX Red", "Cherry MX Brown"]
   },
   {
     type: "boolean",
@@ -75,7 +75,7 @@ const questions = [
     category: "Science: Computers",
     question: "DHCP stands for Dynamic Host Configuration Port.",
     correct_answer: "False",
-    incorrect_answers: ["True"],
+    incorrect_answers: ["True"]
   },
   {
     type: "multiple",
@@ -83,8 +83,8 @@ const questions = [
     category: "Science: Computers",
     question: "Who is the founder of Palantir?",
     correct_answer: "Peter Thiel",
-    incorrect_answers: ["Mark Zuckerberg", "Marc Benioff", "Jack Dorsey"],
-  },
+    incorrect_answers: ["Mark Zuckerberg", "Marc Benioff", "Jack Dorsey"]
+  }
 ];
 
 //______________________________________________
@@ -215,3 +215,6 @@ function countDown() {
 // Avvia il primo timer e carica la prima domanda
 resetTimer();
 caricoDomanda();
+
+let quanteDomande = questions.length;
+localStorage.setItem("quanteDomande", quanteDomande);
