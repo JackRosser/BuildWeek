@@ -55,8 +55,10 @@ section div {
 }
 
 label {
+  display: block;
   font-size: 1.5rem;
   font-weight: 600;
+  margin-bottom: 2rem;
 }
 
 #quantity {
@@ -69,5 +71,17 @@ label {
   font-size: 1.5rem;
   font-weight: 500;
   padding-block: 0.5rem;
-  padding-inline: 0.4rem;
+}
+
+.inp {
+  text-align: center;
+  color: black;
+  border-radius: 50px;
+  border: 0;
+  margin-left: 1rem;
+  font-family: "Outfit";
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-block: 0.4rem;
+  padding-inline: 1rem;
 }

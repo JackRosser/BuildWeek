@@ -8,8 +8,7 @@ console.log(parseInt(risposteCorrette));
 console.log(parseInt(risposteSbagliate));
 
 // tot domande/round
-
-const totDomande = localStorage.getItem("quanteDomande");
+const totDomande = localStorage.getItem("quantity");
 
 // quante corrette e sbagliate
 let corrette = 0;

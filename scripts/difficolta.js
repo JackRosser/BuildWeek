@@ -1,5 +1,20 @@
 let quantity = document.getElementById("quantity");
 
+const add = document.getElementById("add");
+const remove = document.getElementById("remove");
+
+add.addEventListener("click", () => {
+  if (quantity.value < 10) {
+    quantity.value++;
+  }
+});
+
+remove.addEventListener("click", () => {
+  if (quantity.value > 1) {
+    quantity.value--;
+  }
+});
+
 // button easy
 const easyButton = document.getElementById("easyButton");
 
