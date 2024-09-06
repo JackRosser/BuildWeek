@@ -61,6 +61,20 @@ label {
   margin-bottom: 2rem;
 }
 
+h3 {
+  font-size: 1.6rem;
+}
+
+.menu {
+  border-radius: 50px;
+  background-color: #0f103a;
+  border: 2px solid white;
+  box-shadow: inset -6px -2px 7px 0px #ffffff51;
+  padding-block: 0.5rem;
+  width: 350px;
+  margin: auto;
+}
+
 #quantity {
   text-align: center;
   color: black;
@@ -84,4 +98,16 @@ label {
   font-weight: 500;
   padding-block: 0.4rem;
   padding-inline: 1rem;
+  border: 2px solid white;
+  background-color: #b61d79;
+  box-shadow: inset -4px -2px 5px 0px #ffffffa3;
+}
+
+.inp:hover {
+  box-shadow: 0px 0px 3px 3px #ffffffa3;
+}
+
+.inp:active {
+  transition: 150ms;
+  box-shadow: 0px 0px 5px 5px #ffffffa3;
 }
